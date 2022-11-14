@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>week_5-homework- weather application</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+     <script
+   src="https://kit.fontawesome.com/01254cb3f6.js"
+   crossorigin="anonymous">
+ </script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="temperaturecontainer">
+        <h1>
+          <div class="row head">
+            <div class="col-10">
+              <form id="citySearch">
+                <input
+                  type="text"
+                  id="cityinput"
+                  placeholder="Enter city name"
+                  autocomplete="off"
+                  autofocus="on"
+                />
+              </form>
+            </div>
+            <div class="col-2">
+              <button class="magnifyingglass" id="magnifying">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button class="location" id="currentLocation"><i class="fa-solid fa-location-dot"></i></button>
+            </div>
+          </div>
+        </h1>
+        <h2>
+          <div class="row body">
+            <div class="col-6">
+              <div>
+                <div>
+                  <h5 class="card-title display" id="weekDayMonth"></h5>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5 class="card-title"></h5>
+                  <p class="card-text display2" id="placenow">Lisboa</p>
+                  <p class="emoji">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5 class="card-title body2 id="temperatures">
+                    <span id="currentTemperature">20º</span><a href="#" id="celsius-click">C</a> |<span id="temperatures2"> 68º</span><a
+                      href="#" id="fahr-click"
+                      >F</a>
+                  </h5>
+                  <span class="weatherText" id="weatherText"
+                    >spring time weather <br />
+                    no showers</span
+                  > <div class="weatherText"id="humidity">0% humidity</div>
+                  <div class="weatherText" id="windspeed">windspeed of 0km/h</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul class="day">
+                <li>Mon</li>
+                <li>21ºC|10ºC</li>
+                <li><i class="fa-solid fa-cloud-sun"></i></li>
+              </ul>
+              <ul class="day">
+                <li>Tue</li>
+                <li>21ºC|10ºC</li>
+                <li><i class="fa-solid fa-cloud-sun"></i></li>
+              </ul>
+              <ul class="day">
+                <li>Wed</li>
+                <li>21ºC|10ºC</li>
+                <li><i class="fa-solid fa-cloud-sun"></i></li>
+              </ul>
+              <ul class="day">
+                <li>Thu</li>
+                <li>21ºC|10ºC</li>
+                <li><i class="fa-solid fa-cloud-sun"></i></li>
+              </ul>
+              <ul class="day">
+                <li>Fry</li>
+                <li>21ºC|10ºC</li>
+                <li><i class="fa-solid fa-cloud-sun"></i></li>
+              </ul>
+            </div>
+          </div>
+        </h2>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
