@@ -1,0 +1,65 @@
+.temperaturecontainer {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.head {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  font-size: 20px;
+  text-align: left;
+  align-items: center;
+}
+.magnifyingglass {
+  border-radius: 10%;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.location {
+  border-radius: 10%;
+  font-size: 25px;
+}
+.body {
+  font-size: 20px;
+}
+.display {
+  font-size: 18px;
+}
+.display2 {
+  font-size: 22px;
+}
+.body2 {
+  font-size: 35px;
+}
+.weatherText {
+  font-size: 13px;
+}
+.emojis {
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 50px;
+}
+.day {
+  list-style-type: none;
+  font-size: 15px;
+  padding-left: 0;
+}
+li {
+  display: inline;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
