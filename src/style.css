@@ -14,11 +14,12 @@
 .magnifyingglass {
   border-radius: 10%;
   font-size: 25px;
-  margin-bottom: 5px;
+  margin-left: 10px;
 }
 .location {
   border-radius: 10%;
   font-size: 25px;
+  margin-left: 5px;
 }
 .body {
   font-size: 20px;
