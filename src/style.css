@@ -1,3 +1,21 @@
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+li {
+  display: inline;
+}
 .temperaturecontainer {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 400px;
@@ -53,22 +71,4 @@
   font-size: 15px;
   padding-left: 50px;
   padding-bottom: 15px;
-}
-li {
-  display: inline;
-}
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:active {
-  text-decoration: none;
 }
