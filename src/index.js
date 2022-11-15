@@ -2,7 +2,7 @@ function cityLacking(err) {
   let citySearched = document.querySelector("#cityinput");
   if (err.code === "ERR_BAD_REQUEST") {
     alert(
-      `Sorry, we don't know the weather for this city, click OK and try ${(window.location.href = `https://www.google.com/search?q=weather+${citySearched.value}`)}`
+      `Sorry, we don't know the weather for this city, try instead https://www.google.com/search?q=weather+${citySearched.value}`
     );
   }
 }
