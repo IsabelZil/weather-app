@@ -59,7 +59,8 @@ li {
   font-size: 35px;
 }
 .weatherText {
-  font-size: 13px;
+  font-size: 15px;
+  padding: 2px;
 }
 .emoji {
   font-size: 40px;
@@ -67,7 +68,7 @@ li {
 }
 .day {
   list-style-type: none;
-  font-size: 15px;
-  padding-left: 90px;
+  font-size: 18px;
+  padding-left: 80px;
   padding-bottom: 15px;
 }
