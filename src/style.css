@@ -20,8 +20,23 @@ a:active {
 body {
   background-color: #04f2de;
 }
+input {
+  background-color: #e8f308;
+  border: #e8f308 auto;
+}
+form {
+  border-radius: 10px;
+  border: #e8f308 auto;
+  padding: 4px 10px;
+  background-color: #e8f308;
+}
 input::placeholder {
   color: #440025;
+  border: #e8f308;
+}
+input {
+  border: 2px solid #e8f308;
+  border-radius: 10px;
 }
 li {
   display: inline;
@@ -45,16 +60,10 @@ p {
   text-align: left;
   align-items: center;
 }
-.cityinputSearch {
-  border-radius: 10px 10px;
-  border-color: #e8f308;
-  padding: 6px 12px;
-  margin-right: 10px;
-  background-color: #e8f308;
-}
+
 .magnifyingglass {
   border-radius: 10px;
-  border-color: #e8f308;
+  border: 2px solid #e8f308;
   font-size: 20px;
   padding: 6px 12px;
   color: #440025;
@@ -62,7 +71,7 @@ p {
 }
 .location {
   border-radius: 10px;
-  border-color: #04f2de;
+  border: 2px solid #04f2de;
   font-size: 20px;
   padding: 6px 12px;
   color: #fc04e3;
