@@ -17,6 +17,9 @@ a:active {
   text-decoration: none;
   color: #04f2de;
 }
+body {
+  background-color: #04f2de;
+}
 input::placeholder {
   color: #440025;
 }
@@ -37,7 +40,7 @@ p {
   padding: 10px;
 }
 .head {
-  padding: 20px;
+  padding: 20px 0px;
   font-size: 20px;
   text-align: left;
   align-items: center;
@@ -48,67 +51,65 @@ p {
   padding: 6px 12px;
   margin-right: 10px;
   background-color: #e8f308;
-  color: #440025;
 }
-
 .magnifyingglass {
   border-radius: 10px;
   border-color: #e8f308;
   font-size: 20px;
-  margin-left: 20px;
   padding: 6px 12px;
   color: #440025;
   background-color: #e8f308;
 }
 .location {
   border-radius: 10px;
-  border-color: #e8f308;
+  border-color: #04f2de;
   font-size: 20px;
-  margin-left: 7px;
   padding: 6px 12px;
-  color: #440025;
-  background-color: #e8f308;
+  color: #fc04e3;
+  background-color: #04f2de;
 }
 .body1 {
   font-size: 20px;
   padding: 20px 0px;
 }
 .display1 {
-  font-size: 15px;
+  font-size: 18px;
   color: #e8f308;
 }
 .display2 {
   font-size: 30px;
   font-weight: bold;
-  color: #fc04e3;
+  color: #04f2de;
 }
 .body2 {
   font-size: 35px;
   font-weight: bold;
-  color: #fc04e3;
+  color: #04f2de;
 }
 .weatherText {
-  font-size: 15px;
+  font-size: 12px;
   padding: 2px;
   color: #e8f308;
 }
 .emoji {
   font-size: 40px;
   padding: 0px;
-  color: #04f2de;
+  color: #fc04e3;
 }
 .day {
   list-style-type: none;
-  font-size: 15px;
-  padding-left: 80px;
+  padding-left: 75px;
   padding-bottom: 15px;
 }
 .emojis {
-  color: #04f2de;
-}
-.weekday {
+  font-size: 17px;
   color: #fc04e3;
 }
-.tempweekday {
+.weekday {
+  font-size: 17px;
   color: #e8f308;
+}
+.tempweekday {
+  font-size: 13px;
+  color: #04f2de;
 }
