@@ -38,6 +38,9 @@ input {
   border: 2px solid #e8f308;
   border-radius: 10px;
 }
+input:focus-visible {
+  outline: 0px;
+}
 li {
   display: inline;
 }
