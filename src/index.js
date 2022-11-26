@@ -12,12 +12,12 @@ function citySubmission(event) {
 
   function showTemperature(response) {
     console.log(response);
+    temperatureCelsius = Math.round(response.data.main.temp);
     document.querySelector(
       "#placenow"
     ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-    document.querySelector("#currentTemperature").innerHTML = `${Math.round(
-      response.data.main.temp
-    )}`;
+    document.querySelector("#currentTemperature").innerHTML =
+      temperatureCelsius;
     document.querySelector("#weatherText").innerHTML =
       response.data.weather[0].description;
     document.querySelector(
@@ -45,12 +45,11 @@ button.addEventListener("click", citySubmission);
 
 function showTemperature(response) {
   console.log(response);
+  temperatureCelsius = Math.round(response.data.main.temp);
   document.querySelector(
     "#placenow"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-  document.querySelector("#currentTemperature").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}`;
+  document.querySelector("#currentTemperature").innerHTML = temperatureCelsius;
   document.querySelector("#weatherText").innerHTML =
     response.data.weather[0].description;
   document.querySelector(
@@ -79,6 +78,28 @@ navigator.geolocation.getCurrentPosition(currentLocation);
 let buttonCurrentLocation = document.querySelector("#currentLocation");
 buttonCurrentLocation.addEventListener("click", fetchCurrentLocation);
 
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#currentTemperature");
+  let temperatureFahrenheit = Math.round((temperatureCelsius * 9) / 5 + 32);
+  temperature.innerHTML = temperatureFahrenheit;
+  document.querySelector("#currentTemperature").style.color = "#e8f308";
+}
+
+let fahrenheitLink = document.querySelector("#clickFahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#currentTemperature");
+  temperature.innerHTML = temperatureCelsius;
+  document.querySelector("#currentTemperature").style.color = "#04f2de";
+}
+
+let celsiusLink = document.querySelector("#clickCelsius");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let temperatureCelsius = null;
 function formatDate() {
   let week = [
     "Sunday",
