@@ -17,7 +17,7 @@ function citySubmission(event) {
     ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
     document.querySelector("#currentTemperature").innerHTML = `${Math.round(
       response.data.main.temp
-    )}º`;
+    )}`;
     document.querySelector("#weatherText").innerHTML =
       response.data.weather[0].description;
     document.querySelector(
@@ -45,14 +45,12 @@ button.addEventListener("click", citySubmission);
 
 function showTemperature(response) {
   console.log(response);
-  let country = response.data.sys.country;
-  let city = response.data.name;
   document.querySelector(
     "#placenow"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#currentTemperature").innerHTML = `${Math.round(
     response.data.main.temp
-  )}º`;
+  )}`;
   document.querySelector("#weatherText").innerHTML =
     response.data.weather[0].description;
   document.querySelector(
@@ -115,17 +113,3 @@ function formatDate() {
 
 let h5 = document.querySelector("#weekDayMonth");
 h5.innerHTML = formatDate();
-
-function toFahr() {
-  let temperature = document.querySelector("#temperatures2");
-  temperature.innerHTML = "<strong>68º</strong>";
-}
-let fahrClick = document.querySelector("#fahr-click");
-fahrClick.addEventListener("click", toFahr);
-
-function toCelsius() {
-  let temperature = document.querySelector("#currentTemperature");
-  temperature.innerHTML = "<strong>20º</strong>";
-}
-let celsiusClick = document.querySelector("#celsius-click");
-celsiusClick.addEventListener("click", toCelsius);

@@ -1,21 +1,21 @@
 a:link {
   text-decoration: none;
-  color: #04f2de;
+  color:#e8f308;
 }
 
 a:visited {
   text-decoration: none;
-  color: #04f2de;
+  color: #e8f308;
 }
 
 a:hover {
   text-decoration: none;
-  color: #04f2de;
+  color: #e8f308;
 }
 
 a:active {
   text-decoration: none;
-  color: #04f2de;
+  color: #e8f308;
 }
 body {
   background-color: #04f2de;
@@ -30,13 +30,14 @@ form {
   padding: 4px 10px;
   background-color: #e8f308;
 }
-input::placeholder {
-  color: #440025;
-  border: #e8f308;
-}
 input {
   border: 2px solid #e8f308;
   border-radius: 10px;
+}
+input::placeholder {
+  color: #440025;
+  border: #e8f308;
+  text-align: left;
 }
 input:focus-visible {
   outline: 0px;
@@ -58,12 +59,10 @@ p {
   padding: 10px;
 }
 .head {
-  padding: 20px 0px;
   font-size: 20px;
   text-align: left;
   align-items: center;
 }
-
 .magnifyingglass {
   border-radius: 10px;
   border: 2px solid #e8f308;
@@ -94,8 +93,12 @@ p {
   color: #04f2de;
 }
 .body2 {
-  font-size: 35px;
+  font-size: 50px;
   font-weight: bold;
+  color: #04f2de;
+}
+.clickunits {
+  font-size: 15px;
   color: #04f2de;
 }
 .weatherText {

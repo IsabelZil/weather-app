@@ -36,7 +36,6 @@
                   id="cityinput"
                   placeholder="Enter city name"
                   autocomplete="off"
-                  
                 />
               </form>
             </div>
@@ -45,7 +44,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
-            <div class="col-2 head2">
+            <div class="col-2">
               <button class="location" id="currentLocation">
                 <i class="fa-solid fa-location-dot"></i>
               </button>
@@ -64,20 +63,18 @@
                 <div>
                   <h5 class="card-title"></h5>
                   <p class="card-text display2" id="placenow">Lisboa</p>
-                  <p class="emoji">
+                  <p class="emoji" id="iconday">
                     <i class="fa-solid fa-cloud-sun"></i>
                   </p>
                 </div>
               </div>
               <div>
                 <div>
-                  <h5 class="card-title body2 id="temperatures">
-                  <span id="currentTemperature">20º</span
-                  ><a href="#" id="celsius-click">C</a> |<span
-                    id="temperatures2"
+                  <h5 class="card-title id="temperatures">
+                  <span id="currentTemperature" class="body2">20</span
+                  ><span class="clickunits"
+                    ><a href="#"> ºC</a>|<a href="#">ºF</a></span
                   >
-                    68º</span
-                  ><a href="#" id="fahr-click">F</a>
                   <br />
                   <div class="weatherText" id="weatherText">
                     spring time weather
