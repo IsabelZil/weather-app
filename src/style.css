@@ -87,9 +87,6 @@ p {
   font-size: 15px;
   color: #fc04e3;
 }
-a:hover {
-  color: #fc04e3;
-}
 .activeC {
   color: #04f2de;
   cursor: default;
@@ -97,6 +94,7 @@ a:hover {
 }
 .activeC:hover {
   text-decoration: none;
+  color: #fc04e3;
 }
 .activeF {
   color: #e8f308;
@@ -105,6 +103,7 @@ a:hover {
 }
 .activeF:hover {
   text-decoration: none;
+  color: #fc04e3;
 }
 .weatherText {
   font-size: 12px;
