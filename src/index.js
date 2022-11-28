@@ -2,7 +2,7 @@ function cityLacking(err) {
   let citySearched = document.querySelector("#cityinput");
   if (err.code === "ERR_BAD_REQUEST") {
     alert(
-      `Sorry, we don't know the weather for this city, try instead https://www.google.com/search?q=weather+${citySearched.value}`
+      `Enter another city name or try instead https://www.google.com/search?q=weather+${citySearched.value}`
     );
   }
 }
@@ -98,7 +98,6 @@ function showCelsiusTemperature(event) {
 
 let celsiusLink = document.querySelector("#clickCelsius");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
-
 
 function formatDate() {
   let week = [
