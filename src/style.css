@@ -73,6 +73,11 @@ p {
   font-weight: bold;
   color: #04f2de;
 }
+.emoji {
+  font-size: 40px;
+  padding: 0px;
+  color: #fc04e3;
+}
 .body2 {
   font-size: 50px;
   font-weight: bold;
@@ -80,6 +85,9 @@ p {
 }
 .clickunits {
   font-size: 15px;
+  color: #fc04e3;
+}
+a:hover {
   color: #fc04e3;
 }
 .activeC {
@@ -98,17 +106,12 @@ p {
 .activeF:hover {
   text-decoration: none;
 }
-
 .weatherText {
   font-size: 12px;
   padding: 2px;
   color: #e8f308;
 }
-.emoji {
-  font-size: 40px;
-  padding: 0px;
-  color: #fc04e3;
-}
+
 .day {
   list-style-type: none;
   padding-left: 75px;

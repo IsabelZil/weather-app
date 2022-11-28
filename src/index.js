@@ -50,6 +50,7 @@ function showTemperature(response) {
     "#placenow"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#currentTemperature").innerHTML = temperatureCelsius;
+  document.querySelector("#currentTemperature").style.color = "#04f2de";
   document.querySelector("#weatherText").innerHTML =
     response.data.weather[0].description;
   document.querySelector(
