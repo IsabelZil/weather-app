@@ -1,22 +1,3 @@
-a:link {
-  text-decoration: none;
-  color:#e8f308;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #e8f308;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #e8f308;
-}
-
-a:active {
-  text-decoration: none;
-  color: #e8f308;
-}
 body {
   background-color: #04f2de;
 }
@@ -99,8 +80,25 @@ p {
 }
 .clickunits {
   font-size: 15px;
-  color: #04f2de;
+  color: #fc04e3;
 }
+.activeC {
+  color: #04f2de;
+  cursor: default;
+  text-decoration: none;
+}
+.activeC:hover {
+  text-decoration: none;
+}
+.activeF {
+  color: #e8f308;
+  cursor: default;
+  text-decoration: none;
+}
+.activeF:hover {
+  text-decoration: none;
+}
+
 .weatherText {
   font-size: 12px;
   padding: 2px;
@@ -127,4 +125,7 @@ p {
 .tempweekday {
   font-size: 13px;
   color: #04f2de;
+}
+.github-color {
+  color: #fc04e3;
 }

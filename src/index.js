@@ -99,7 +99,7 @@ function showCelsiusTemperature(event) {
 let celsiusLink = document.querySelector("#clickCelsius");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-let temperatureCelsius = null;
+
 function formatDate() {
   let week = [
     "Sunday",
@@ -132,5 +132,8 @@ function formatDate() {
   return date;
 }
 
+let temperatureCelsius = null;
+
 let h5 = document.querySelector("#weekDayMonth");
+
 h5.innerHTML = formatDate();
