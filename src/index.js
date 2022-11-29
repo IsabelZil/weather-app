@@ -26,6 +26,9 @@ function citySubmission(event) {
     document.querySelector("#windspeed").innerHTML = `windspeed of ${Math.round(
       response.data.wind.speed
     )}km/h`;
+    document
+      .querySelector("#iconday")
+      .setAttribute("src", `src/images/${response.data.weather[0].icon}.svg`);
   }
 
   let appiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
@@ -59,6 +62,9 @@ function showTemperature(response) {
   document.querySelector("#windspeed").innerHTML = `windspeed of ${Math.round(
     response.data.wind.speed
   )}km/h`;
+  document
+    .querySelector("#iconday")
+    .setAttribute("src", `src/images/${response.data.weather[0].icon}.svg`);
 }
 
 function currentLocation(position) {
