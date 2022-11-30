@@ -1,5 +1,5 @@
-body {
-  background-color: #04f2de;
+.body {
+  background: linear-gradient(to top, #e8f308 0%, #04f2de 100%);
 }
 input {
   background-color: #e8f308;
