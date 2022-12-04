@@ -102,6 +102,7 @@ function currentLocation(position) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let weatherUrl2 = `${apiEndpoint}?lat=${currentlatitude}&lon=${currentlongitude}&appid=${appiKey}&units=${units}`;
   axios.get(weatherUrl2).then(showTemperature);
+  axios.get(weatherUrl2).then(showTemperature).catch(searchCity);
 }
 
 function fetchCurrentLocation() {
@@ -207,5 +208,4 @@ let temperatureCelsius = null;
 h5.innerHTML = formatDate();
 
 let city = document.querySelector("#cityinput").value;
-searchCity("Lisboa");
 navigator.geolocation.getCurrentPosition(currentLocation);
