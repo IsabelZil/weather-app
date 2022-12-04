@@ -1,101 +1,17 @@
+function citySubmission(event) {
+  city = document.querySelector("#cityinput").value;
+  event.preventDefault();
+  searchCity(city);
+}
+
 function cityLacking(err) {
-  let citySearched = document.querySelector("#cityinput");
+  city = document.querySelector("#cityinput").value;
   if (err.code === "ERR_BAD_REQUEST") {
     alert(
-      `Enter another city name or try instead https://www.google.com/search?q=weather+${citySearched.value}`
+      `Enter another city name or try instead https://www.google.com/search?q=weather+${city}`
     );
   }
 }
-function citySubmission(event) {
-  event.preventDefault();
-  let citySearched = document.querySelector("#cityinput");
-
-  function showTemperature(response) {
-    console.log(response);
-    temperatureCelsius = Math.round(response.data.main.temp);
-    document.querySelector(
-      "#placenow"
-    ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-    document.querySelector("#currentTemperature").innerHTML =
-      temperatureCelsius;
-    document.querySelector("#weatherText").innerHTML =
-      response.data.weather[0].description;
-    document.querySelector(
-      "#humidity"
-    ).innerHTML = `${response.data.main.humidity}% humidity`;
-    document.querySelector("#windspeed").innerHTML = `windspeed of ${Math.round(
-      response.data.wind.speed
-    )}km/h`;
-    let iconElement = document.querySelector("#iconday");
-    if (response.data.weather[0].icon === "01d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-    }
-    if (response.data.weather[0].icon === "01n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-moon emoji"></i>`;
-    }
-    if (response.data.weather[0].icon === "02d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun emoji"></i>`;
-    }
-    if (response.data.weather[0].icon === "02n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon emoji"></i>`;
-    }
-    if (response.data.weather[0].icon === "03d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun emoji"></i>`;
-    }
-    if (response.data.weather[0].icon === "03n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon emoji"></i>`;
-    }
-    if (response.data.weather[0].icon === "04d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
-    }
-    if (response.data.weather[0].icon === "04n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
-    }
-    if (response.data.weather[0].icon === "09d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun-rain"></i>`;
-    }
-    if (response.data.weather[0].icon === "09n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon-rain"></i>`;
-    }
-    if (response.data.weather[0].icon === "10d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
-    }
-    if (response.data.weather[0].icon === "10n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
-    }
-    if (response.data.weather[0].icon === "11d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
-    }
-    if (response.data.weather[0].icon === "11n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
-    }
-    if (response.data.weather[0].icon === "13d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
-    }
-    if (response.data.weather[0].icon === "13n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
-    }
-    if (response.data.weather[0].icon === "50d") {
-      iconElement.innerHTML = `<i class="fa-solid fa-smog"></i>`;
-    }
-    if (response.data.weather[0].icon === "50n") {
-      iconElement.innerHTML = `<i class="fa-solid fa-smog"></i>`;
-    }
-  }
-  let appiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let units = "metric";
-  let city = citySearched.value;
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let weatherUrl1 = `${apiEndpoint}?q=${city}&appid=${appiKey}&units=${units}`;
-  axios.get(weatherUrl1).then(showTemperature);
-  axios.get(weatherUrl1).then(showTemperature).catch(cityLacking);
-}
-
-let form = document.querySelector("#citySearch");
-form.addEventListener("submit", citySubmission);
-
-let button = document.querySelector("#magnifying");
-button.addEventListener("click", citySubmission);
 
 function showTemperature(response) {
   console.log(response);
@@ -104,7 +20,6 @@ function showTemperature(response) {
     "#placenow"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#currentTemperature").innerHTML = temperatureCelsius;
-  document.querySelector("#currentTemperature").style.color = "#04f2de";
   document.querySelector("#weatherText").innerHTML =
     response.data.weather[0].description;
   document.querySelector(
@@ -170,6 +85,15 @@ function showTemperature(response) {
   }
 }
 
+function searchCity(city) {
+  let appiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let units = "metric";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let weatherUrl1 = `${apiEndpoint}?q=${city}&appid=${appiKey}&units=${units}`;
+  axios.get(weatherUrl1).then(showTemperature);
+  axios.get(weatherUrl1).then(showTemperature).catch(cityLacking);
+}
+
 function currentLocation(position) {
   let appiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let currentlatitude = position.coords.latitude;
@@ -185,9 +109,6 @@ function fetchCurrentLocation() {
 }
 navigator.geolocation.getCurrentPosition(currentLocation);
 
-let buttonCurrentLocation = document.querySelector("#currentLocation");
-buttonCurrentLocation.addEventListener("click", fetchCurrentLocation);
-
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#currentTemperature");
@@ -196,15 +117,56 @@ function showFahrenheitTemperature(event) {
   document.querySelector("#currentTemperature").style.color = "#e8f308";
 }
 
-let fahrenheitLink = document.querySelector("#clickFahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
 function showCelsiusTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#currentTemperature");
   temperature.innerHTML = temperatureCelsius;
   document.querySelector("#currentTemperature").style.color = "#04f2de";
 }
+
+function formatDate() {
+  let week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let now = new Date();
+  let weeksday = week[now.getDay()];
+  let monthofyear = month[now.getMonth()];
+  let day = now.getDate();
+  let date = `${weeksday}, ${monthofyear} ${day}`;
+  return date;
+}
+
+let form = document.querySelector("#citySearch");
+form.addEventListener("submit", citySubmission);
+
+let button = document.querySelector("#magnifying");
+button.addEventListener("click", citySubmission);
+
+let buttonCurrentLocation = document.querySelector("#currentLocation");
+buttonCurrentLocation.addEventListener("click", fetchCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#clickFahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#clickCelsius");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
@@ -244,3 +206,6 @@ function formatDate() {
 let h5 = document.querySelector("#weekDayMonth");
 let temperatureCelsius = null;
 h5.innerHTML = formatDate();
+
+let city = document.querySelector("#cityinput").value;
+searchCity("Lisboa");
