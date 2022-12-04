@@ -13,6 +13,30 @@ function cityLacking(err) {
   }
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<ul class="day">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <ul class="day">
+  <li class="weekday">${day}</li>
+  <li class="tempweekday">
+    <span class="temperatureMax">21ºC</span>|
+    <span class="temperatureMin">10ºC</span>
+  </li>
+  <li>
+    <i class="fa-solid fa-cloud-sun emojis"></i>
+  </li> </ul>`;
+  });
+  forecastHTML = forecastHTML + `</ul>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function showTemperature(response) {
   console.log(response);
   temperatureCelsius = Math.round(response.data.main.temp);
@@ -209,3 +233,4 @@ h5.innerHTML = formatDate();
 
 let city = document.querySelector("#cityinput").value;
 navigator.geolocation.getCurrentPosition(currentLocation);
+displayForecast();

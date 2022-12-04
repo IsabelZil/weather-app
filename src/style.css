@@ -72,7 +72,7 @@ p {
   color: #04f2de;
 }
 .emoji {
-  font-size: 40px;
+  font-size: 45px;
   padding: 0px;
   color: #fc04e3;
 }
@@ -110,13 +110,13 @@ p {
 }
 
 .day {
-  list-style-type: none;
-  padding-left: 75px;
-  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-bottom: 30px;
 }
 .emojis {
   font-size: 17px;
   color: #fc04e3;
+  opacity: 0.9;
 }
 .weekday {
   font-size: 17px;
@@ -125,6 +125,12 @@ p {
 .tempweekday {
   font-size: 13px;
   color: #04f2de;
+}
+.temperatureMax {
+  font-weight: bold;
+}
+.temperatureMin {
+  opacity: 0.8;
 }
 .github-color {
   color: #fc04e3;
