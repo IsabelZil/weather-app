@@ -107,7 +107,6 @@ function currentLocation(position) {
 function fetchCurrentLocation() {
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
-navigator.geolocation.getCurrentPosition(currentLocation);
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
@@ -209,3 +208,4 @@ h5.innerHTML = formatDate();
 
 let city = document.querySelector("#cityinput").value;
 searchCity("Lisboa");
+navigator.geolocation.getCurrentPosition(currentLocation);
