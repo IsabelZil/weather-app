@@ -26,7 +26,66 @@ function formatDayForecast(timeForecast) {
   return days[day];
 }
 
+function getForecastIcons(forecastDay) {
+  let iconElement = document.querySelector("#emojis");
+  if (forecastDay.weather[0].icon === "01d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "01n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "02d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "02n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "03d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "03n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "04d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "04n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "09d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun-rain"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "09n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon-rain"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "10d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "10n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "11d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "11n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "13d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "13n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "50d") {
+    iconElement.innerHTML = `<i class="fa-solid fa-smog"></i>`;
+  }
+  if (forecastDay.weather[0].icon === "50n") {
+    iconElement.innerHTML = `<i class="fa-solid fa-smog"></i>`;
+  }
+}
+
 function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
   let forecastHTML = `<ul class="day">`;
@@ -40,9 +99,9 @@ function displayForecast(response) {
     <span class="temperatureMax">${Math.round(forecastDay.temp.max)}ºC</span>|
     <span class="temperatureMin">${Math.round(forecastDay.temp.min)}ºC</span>
   </li>
-  <li>
-    <i class="fa-solid fa-cloud-sun emojis"></i>
-  </li> </ul>`;
+  <li class="emojis" id="emojis">
+    ${getForecastIcons(forecastDay.weather[0].icon)}
+  </li></ul>`;
     }
   });
   forecastHTML = forecastHTML + `</ul>`;
@@ -68,19 +127,19 @@ function showTemperature(response) {
     iconElement.innerHTML = `<i class="fa-solid fa-sun"></i>`;
   }
   if (response.data.weather[0].icon === "01n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-moon emoji"></i>`;
+    iconElement.innerHTML = `<i class="fa-solid fa-moon"></i>`;
   }
   if (response.data.weather[0].icon === "02d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun emoji"></i>`;
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`;
   }
   if (response.data.weather[0].icon === "02n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon emoji"></i>`;
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon"></i>`;
   }
   if (response.data.weather[0].icon === "03d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun emoji"></i>`;
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`;
   }
   if (response.data.weather[0].icon === "03n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon emoji"></i>`;
+    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon"></i>`;
   }
   if (response.data.weather[0].icon === "04d") {
     iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
