@@ -18,29 +18,35 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function formatDayForecast(timeForecast) {
+  let date = new Date(timeForecast * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response);
   let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-
+  let forecast = response.data.daily;
   let forecastHTML = `<ul class="day">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` <ul class="day">
-  <li class="weekday">${day}</li>
+  forecast.forEach(function (forecastDay, dayn) {
+    if (dayn < 5) {
+      forecastHTML =
+        forecastHTML +
+        ` <ul class="day">
+  <li class="weekday">${formatDayForecast(forecastDay.dt)}</li>
   <li class="tempweekday">
-    <span class="temperatureMax">21ºC</span>|
-    <span class="temperatureMin">10ºC</span>
+    <span class="temperatureMax">${Math.round(forecastDay.temp.max)}ºC</span>|
+    <span class="temperatureMin">${Math.round(forecastDay.temp.min)}ºC</span>
   </li>
   <li>
     <i class="fa-solid fa-cloud-sun emojis"></i>
   </li> </ul>`;
+    }
   });
   forecastHTML = forecastHTML + `</ul>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
 function showTemperature(response) {
