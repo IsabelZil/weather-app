@@ -1,7 +1,6 @@
 .body {
   background: radial-gradient(circle at 10% 20%, #e8f308 0%, #04f2de 90%);
 }
-
 form {
   border-radius: 10px;
   border: #e8f308 auto;
@@ -25,7 +24,7 @@ li {
   display: inline;
 }
 p {
-  font-size: 0.5em;
+  font-size: 0.7em;
   color: #04f2de;
 }
 .temperaturecontainer {
@@ -108,10 +107,10 @@ p {
   padding: 2px;
   color: #e8f308;
 }
-
 .day {
   padding-left: 40px;
   padding-bottom: 35px;
+  text-align: center;
 }
 .emojis {
   font-size: 17px;
@@ -119,7 +118,7 @@ p {
   opacity: 0.9;
 }
 .weekday {
-  font-size: 17px;
+  font-size: 15px;
   color: #e8f308;
 }
 .tempweekday {
