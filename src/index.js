@@ -26,61 +26,60 @@ function formatDayForecast(timeForecast) {
   return days[day];
 }
 
-function getForecastIcons(forecastDay) {
-  let iconElement = document.querySelector("#emojis");
-  if (forecastDay.weather[0].icon === "01d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+function getForecastIcons(forecastIcon) {
+  if (forecastIcon === "01d") {
+    return `<i class="fa-solid fa-sun"></i>`;
   }
-  if (forecastDay.weather[0].icon === "01n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+  if (forecastIcon === "01n") {
+    return `<i class="fa-solid fa-moon"></i>`;
   }
-  if (forecastDay.weather[0].icon === "02d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`;
+  if (forecastIcon === "02d") {
+    return `<i class="fa-solid fa-cloud-sun"></i>`;
   }
-  if (forecastDay.weather[0].icon === "02n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon"></i>`;
+  if (forecastIcon === "02n") {
+    return `<i class="fa-solid fa-cloud-moon"></i>`;
   }
-  if (forecastDay.weather[0].icon === "03d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`;
+  if (forecastIcon === "03d") {
+    return `<i class="fa-solid fa-cloud-sun"></i>`;
   }
-  if (forecastDay.weather[0].icon === "03n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon"></i>`;
+  if (forecastIcon === "03n") {
+    return `<i class="fa-solid fa-cloud-moon"></i>`;
   }
-  if (forecastDay.weather[0].icon === "04d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
+  if (forecastIcon === "04d") {
+    return `<i class="fa-solid fa-cloud"></i>`;
   }
-  if (forecastDay.weather[0].icon === "04n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
+  if (forecastIcon === "04n") {
+    return `<i class="fa-solid fa-cloud"></i>`;
   }
-  if (forecastDay.weather[0].icon === "09d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-sun-rain"></i>`;
+  if (forecastIcon === "09d") {
+    return `<i class="fa-solid fa-cloud-sun-rain"></i>`;
   }
-  if (forecastDay.weather[0].icon === "09n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-moon-rain"></i>`;
+  if (forecastIcon === "09n") {
+    return `<i class="fa-solid fa-cloud-moon-rain"></i>`;
   }
-  if (forecastDay.weather[0].icon === "10d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
+  if (forecastIcon === "10d") {
+    return `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
   }
-  if (forecastDay.weather[0].icon === "10n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
+  if (forecastIcon === "10n") {
+    return `<i class="fa-solid fa-cloud-showers-heavy"></i>`;
   }
-  if (forecastDay.weather[0].icon === "11d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
+  if (forecastIcon === "11d") {
+    return `<i class="fa-solid fa-bolt-lightning"></i>`;
   }
-  if (forecastDay.weather[0].icon === "11n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-bolt-lightning"></i>`;
+  if (forecastIcon === "11n") {
+    return `<i class="fa-solid fa-bolt-lightning"></i>`;
   }
-  if (forecastDay.weather[0].icon === "13d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
+  if (forecastIcon === "13d") {
+    return `<i class="fa-solid fa-snowflake"></i>`;
   }
-  if (forecastDay.weather[0].icon === "13n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
+  if (forecastIcon === "13n") {
+    return `<i class="fa-solid fa-snowflake"></i>`;
   }
-  if (forecastDay.weather[0].icon === "50d") {
-    iconElement.innerHTML = `<i class="fa-solid fa-smog"></i>`;
+  if (forecastIcon === "50d") {
+    return `<i class="fa-solid fa-smog"></i>`;
   }
-  if (forecastDay.weather[0].icon === "50n") {
-    iconElement.innerHTML = `<i class="fa-solid fa-smog"></i>`;
+  if (forecastIcon === "50n") {
+    return `<i class="fa-solid fa-smog"></i>`;
   }
 }
 
