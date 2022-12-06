@@ -84,7 +84,6 @@ function getForecastIcons(forecastIcon) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
   let forecastHTML = `<ul class="day">`;
@@ -95,7 +94,7 @@ function displayForecast(response) {
         ` <ul class="day">
   <li class="weekday">${formatDayForecast(forecastDay.dt)}</li>
   <li class="tempweekday">
-    <span class="temperatureMax">${Math.round(forecastDay.temp.max)}ºC</span>|
+    <span class="temperatureMax">${Math.round(forecastDay.temp.max)}ºC</span> |
     <span class="temperatureMin">${Math.round(forecastDay.temp.min)}ºC</span>
   </li>
   <li class="emojis" id="emojis">
