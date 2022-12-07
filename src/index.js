@@ -301,4 +301,5 @@ let temperatureCelsius = null;
 h5.innerHTML = formatDate();
 
 let city = document.querySelector("#cityinput").value;
+city = city.trim();
 navigator.geolocation.getCurrentPosition(currentLocation);
