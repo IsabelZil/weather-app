@@ -27,70 +27,14 @@ p {
   font-size: 0.7em;
   color: #04f2de;
 }
-ul,
-.day {
-  padding: 0;
-  margin-left: 0;
-}
 p,
 .display2 {
   margin: 8px 0px;
 }
-.temperaturecontainer {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 500px;
-  margin: 20px auto;
-  border: 10px solid #e8f308;
-  border-radius: 20px;
-  background-color: #440025;
-  padding: 10px;
-}
-.head {
-  font-size: 20px;
-  text-align: left;
-  align-items: center;
-}
-.magnifyingglass {
-  border-radius: 10px;
-  border: 2px solid #e8f308;
-  font-size: 20px;
-  padding: 6px 12px;
-  color: #440025;
-  background-color: #e8f308;
-}
-.location {
-  border-radius: 10px;
-  border: 2px solid #04f2de;
-  font-size: 20px;
-  padding: 6px 12px;
-  color: #fc04e3;
-  background-color: #04f2de;
-}
-.body1 {
-  font-size: 20px;
-}
-.display1 {
-  font-size: 18px;
-  color: #e8f308;
-}
-.display2 {
-  font-size: 30px;
-  font-weight: bold;
-  color: #04f2de;
-}
-.emoji {
-  font-size: 45px;
-  padding: 0px;
-  color: #fc04e3;
-}
-.body2 {
-  font-size: 50px;
-  font-weight: bold;
-  color: #04f2de;
-}
-.clickunits {
-  font-size: 15px;
-  color: #fc04e3;
+ul,
+.day {
+  padding: 0;
+  margin-left: 0;
 }
 .activeC {
   color: #04f2de;
@@ -110,28 +54,75 @@ p,
   text-decoration: none;
   color: #fc04e3;
 }
-.weatherText {
-  font-size: 12px;
-  padding: 2px;
-  color: #e8f308;
+.body1 {
+  font-size: 20px;
+  text-align: center;
+}
+.body2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #04f2de;
+}
+.clickunits {
+  font-size: 15px;
+  color: #fc04e3;
 }
 .day {
   padding-top: 0px;
   padding-bottom: 34px;
-  text-align: left;
+  text-align: center;
+}
+.display1 {
+  font-size: 18px;
+  color: #e8f308;
+}
+.display2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #04f2de;
+}
+.emoji {
+  font-size: 45px;
+  padding: 0px;
+  color: #fc04e3;
 }
 .emojis {
   font-size: 17px;
   color: #fc04e3;
   opacity: 0.9;
 }
-.weekday {
-  font-size: 15px;
-  color: #e8f308;
+.github-color {
+  color: #fc04e3;
 }
-.tempweekday {
-  font-size: 13px;
-  color: #04f2de;
+.head {
+  font-size: 20px;
+  text-align: left;
+  align-items: center;
+}
+.location {
+  border-radius: 10px;
+  border: 2px solid #04f2de;
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #fc04e3;
+  background-color: #04f2de;
+}
+.magnifyingglass {
+  border-radius: 10px;
+  border: 2px solid #e8f308;
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #440025;
+  background-color: #e8f308;
+}
+.temperaturecontainer {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 10px solid #e8f308;
+  border-radius: 20px;
+  background-color: #440025;
+  padding: 10px;
 }
 .temperatureMax {
   font-weight: bold;
@@ -139,8 +130,18 @@ p,
 .temperatureMin {
   opacity: 0.8;
 }
-.github-color {
-  color: #fc04e3;
+.tempweekday {
+  font-size: 13px;
+  color: #04f2de;
+}
+.weatherText {
+  font-size: 12px;
+  padding: 2px;
+  color: #e8f308;
+}
+.weekday {
+  font-size: 15px;
+  color: #e8f308;
 }
 #cityinput {
   width: 150px;
