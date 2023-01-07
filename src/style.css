@@ -1,5 +1,6 @@
 .body {
   background: radial-gradient(circle at 10% 20%, #e8f308 0%, #04f2de 90%);
+min-height: 100vh;
 }
 form {
   border-radius: 10px;
