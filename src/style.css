@@ -56,7 +56,6 @@ ul,
   text-decoration: none;
   color: #fc04e3;
 }
-
 .body2 {
   font-size: 50px;
   font-weight: bold;
@@ -78,7 +77,6 @@ ul,
   color: #440025;
   background-color: #e8f308;
 }
-
 .cityinput {
   width: 150px;
 }
@@ -110,7 +108,6 @@ ul,
   font-size: 18px;
   color: #e8f308;
 }
-
 .emoji {
   font-size: 45px;
   padding: 0px;
@@ -127,7 +124,6 @@ ul,
 .main {
   text-align: center;
 }
-
 .temperatureMax {
   font-weight: bold;
 }
