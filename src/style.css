@@ -4,7 +4,7 @@ min-height: 100vh;
 }
 form {
   border-radius: 10px;
-  border: #e8f308 auto;
+  border: 2px solid #e8f308;
   padding: 4px 10px;
   background-color: #e8f308;
 }
@@ -12,6 +12,7 @@ input {
   background-color: #e8f308;
   border: 2px solid #e8f308;
   border-radius: 10px;
+  font-size:18px;
 }
 input::placeholder {
   color: #440025;
@@ -29,7 +30,7 @@ p {
   color: #04f2de;
 }
 p,
-.display2 {
+.currentPlace {
   margin: 8px 0px;
 }
 ul,
@@ -55,15 +56,29 @@ ul,
   text-decoration: none;
   color: #fc04e3;
 }
-.body1 {
-  font-size: 20px;
-  text-align: center;
-}
+
 .body2 {
   font-size: 50px;
   font-weight: bold;
   color: #04f2de;
 }
+.buttonCurrentLocation {
+  border-radius: 10px;
+  border: 2px solid #04f2de;
+  font-size: 20px;
+  padding: 4px 12px;
+  color: #fc04e3;
+  background-color: #04f2de;
+}
+.buttonMagnifyingGlass {
+  border-radius: 10px;
+  border: 2px solid #e8f308;
+  font-size: 20px;
+  padding: 4px 12px;
+  color: #440025;
+  background-color: #e8f308;
+}
+
 .cityinput {
   width: 150px;
 }
@@ -71,20 +86,31 @@ ul,
   font-size: 15px;
   color: #fc04e3;
 }
-.day {
-  padding-top: 0px;
-  padding-bottom: 34px;
-  text-align: center;
+.contentcontainer {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 10px solid #e8f308;
+  border-radius: 20px;
+  background-color: #440025;
+   padding: 15px 10px 15px 20px;
 }
-.display1 {
-  font-size: 18px;
-  color: #e8f308;
-}
-.display2 {
+.currentPlace {
   font-size: 30px;
   font-weight: bold;
   color: #04f2de;
 }
+.day {
+  padding-top: 0px;
+  padding-bottom: 34px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.displayDate {
+  font-size: 18px;
+  color: #e8f308;
+}
+
 .emoji {
   font-size: 45px;
   padding: 0px;
@@ -98,36 +124,10 @@ ul,
 .github-color {
   color: #fc04e3;
 }
-.head {
-  font-size: 20px;
-  text-align: left;
-  align-items: center;
+.main {
+  text-align: center;
 }
-.location {
-  border-radius: 10px;
-  border: 2px solid #04f2de;
-  font-size: 20px;
-  padding: 6px 12px;
-  color: #fc04e3;
-  background-color: #04f2de;
-}
-.magnifyingglass {
-  border-radius: 10px;
-  border: 2px solid #e8f308;
-  font-size: 20px;
-  padding: 6px 12px;
-  color: #440025;
-  background-color: #e8f308;
-}
-.temperaturecontainer {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 500px;
-  margin: 20px auto;
-  border: 10px solid #e8f308;
-  border-radius: 20px;
-  background-color: #440025;
-  padding: 10px;
-}
+
 .temperatureMax {
   font-weight: bold;
 }

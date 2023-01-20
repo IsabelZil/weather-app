@@ -20,76 +20,68 @@
   </head>
   <body class="body">
     <div class="container">
-      <div class="temperaturecontainer">
-        <h1>
-          <div class="row head">
-            <div class="col-8">
-              <form id="citySearch">
-                <input
-                  type="text"
-                  class="cityinput"
-                  id="cityinput"
-                  placeholder="Enter city name"
-                  autocomplete="off"
-                />
-              </form>
-            </div>
-            <div class="col-2 d-flex justify-content-evenly">
-              <button class="magnifyingglass" id="magnifying">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-            <div class="col-2 d-flex justify-content-evenly">
-              <button class="location" id="currentLocation">
-                <i class="fa-solid fa-location-dot"></i>
-              </button>
-            </div>
+      <div class="contentcontainer">
+        <div class="row">
+          <div class="col-8">
+            <form id="citySearch">
+              <input
+                type="text"
+                class="cityinput"
+                id="cityinput"
+                placeholder="Enter city name"
+                autocomplete="off"
+              />
+            </form>
           </div>
-        </h1>
-        <h2>
-          <div class="container">
-            <div class="row body1 mt-3">
-              <div class="col-sm-7">
+          <div class="col-2 d-flex justify-content-evenly">
+            <button class="buttonMagnifyingGlass" id="magnifying">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="col-2 d-flex justify-content-evenly">
+            <button class="buttonCurrentLocation" id="currentLocation">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="row main mt-3">
+            <div class="col-sm-7">
+              <div>
                 <div>
-                  <div>
-                    <h5 class="card-title display1" id="weekDayMonth"></h5>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <h5 class="card-title"></h5>
-                    <p class="card-text display2" id="placenow">Lisboa, PT</p>
-                    <p class="emoji" id="iconday">
-                      <i class="fa-solid fa-cloud-sun"></i>
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="card-title" id="temperatures">                 
-                    <span id="currentTemperature" class="body2">20</span
-                    ><span class="clickunits"
-                      ><a href="#" id="clickCelsius" class="activeC"> ºC</a>|<a
-                        href="#"
-                        id="clickFahrenheit"
-                        class="activeF"
-                        >ºF</a
-                      ></span
-                    >
-                    <br />
-                    <div class="weatherText" id="weatherText">
-                      spring time weather
-                    </div>
-                    <div class="weatherText" id="humidity">0% humidity</div>
-                    <div class="weatherText mb-3" id="windspeed">
-                      windspeed of 0km/h
-                    </div>
-                  </div>
+                  <h5 class="card-title displayDate" id="weekDayMonth"></h5>
                 </div>
               </div>
-              <div class="col-sm-5" id="forecast"></div>
+              <div>
+                <h5 class="card-title">
+                  <p class="card-text currentPlace" id="placenow">Lisboa, PT</p>
+                  <p class="emoji" id="iconday">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </p>
+                </h5>
+              </div>
+              <div>
+                <div class="card-title" id="temperatures">
+                  <span id="currentTemperature" class="body2">20</span
+                  ><span>
+                    ><a href="#" id="clickCelsius" class="activeC"> ºC</a>|<a
+                      href="#"
+                      id="clickFahrenheit"
+                      class="activeF"
+                      >ºF</a
+                    ></span
+                  >
+                </div>
+                <div class="weatherText">
+                  <div id="weatherText">spring time weather</div>
+                  <div id="humidity">0% humidity</div>
+                  <div id="windspeed">windspeed of 0km/h</div>
+                </div>
+              </div>
             </div>
+            <div class="col-sm-5" id="forecast"></div>
           </div>
-        </h2>
+        </div>
         <p class="text-center">
           <a href="https://github.com/IsabelZil/weather-app" target="_blank"
             ><i class="fa-brands fa-github github-color"></i
