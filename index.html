@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="weather application built with vanilla js" />
     <title>Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
     <link
@@ -20,6 +21,7 @@
   </head>
   <body class="body">
     <div class="container">
+      <h1></h1>
       <div class="contentcontainer">
         <div class="row">
           <div class="col-8 justify-content-center">
@@ -54,7 +56,9 @@
               </div>
               <div>
                 <h5 class="card-title">
-                  <p class="card-text currentPlace mt-3" id="placenow">Lisboa, PT</p>
+                  <p class="card-text currentPlace mt-3" id="placenow">
+                    Lisboa, PT
+                  </p>
                   <p class="emoji" id="iconday">
                     <i class="fa-solid fa-cloud-sun"></i>
                   </p>
@@ -64,10 +68,8 @@
                 <div class="card-title" id="temperatures">
                   <span id="currentTemperature" class="body2">20 </span
                   ><span>
-                    <a href="#" id="clickCelsius" class="activeC">ºC|</a><a
-                      href="#"
-                      id="clickFahrenheit"
-                      class="activeF"
+                    <a href="#" id="clickCelsius" class="activeC">ºC|</a
+                    ><a href="#" id="clickFahrenheit" class="activeF"
                       >|ºF</a
                     ></span
                   >
